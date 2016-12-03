@@ -1,0 +1,54 @@
+/* EDITORIAL FOR CQMS4C1 */
+Editorial by-Vishal Kumar.
+
+PROBLEM A:- 
+         Statement-You are given n strings and you have to find number of strings which start with 'V'.
+         Solution-To find the answer you just have to check whether the first letter of each string is 'V' or not. If yes then increase the counter by 1.One thing that 	 everyone should keep in mind that we have to count those strings whose first character is 'V' not 'v'.
+         
+	 Difficulty - Cakewalk
+	 Time Complexity- O(n).
+         Tag-Implemenation.
+
+PROBLEM B:-
+        Statement - You are given an array A of n elements and you have to find the absolute difference between maximum and minimum sum obtained using n-1 elements.
+         
+	Solution-We can see here that minimum sum will be obtained by taking all elements execpt the largest element in the array and maximum sum will be obtained by 	        taking all elements except the smallest element.So, one way to do this is,we will sort the array in ascending order.Lets say after sorting the array we 	get a1,a2,a3,....,an.So clearly a1 is minimum element and an is maximum element in the array.Therefore our answer will be |(a1+a2+..+a(n-1))-(a2+a3+..+an)| 	which is nothing but |a1-an|.So, the final answer will be absolute difference between maximum and minimum element of the array.Maximum and  
+        minimum element can be calculated in O(n) complexity without using sorting.
+       
+	Difficulty - Easy
+	Time Complexity-O(n) or O(nlogn).
+        Tag-Sorting.
+
+PROBLEM C:-
+       Statement-You are given a binary string and you have to find maximum number of 0's that occurs between any two 1's.Solution-This is a basic implementation based        question.We will have to find all indexes i where s[i]='1' and find maximum distance between pair i,j where 1<=i<j<=n,where s[i]='1' ,s[j]='1' and n=length of        string. 
+	Difficulty - Easy
+       	Time Complexity-O(n).
+       	Tag-Implementation.
+
+PROBLEM D:-
+       Statement-There are two numbers given x and y.We have to find minumum value of n such that for all x>=n,x can be formed using only x and y.
+      Solution-If gcd(x,y)>1 then the solution doesn't exit.Otherwise,answer will be x*y-x-y+1.
+      Corner case-If x or y is equal to 1 then answer will be 1.
+	Difficulty - Medium
+	Time Complexity O(log(n))
+	Tag - Maths, Number Theory
+
+PROBLEM E:-
+        Statement-There are two strings given a and b(same or different leghth),we have to find whether we can convert string a into b or not using several 	operations.In one operation we can take two adjacent characters of a string  say x and y and replace one of them by x OR y and another by x XOR y.
+        
+	Solution-After doing some observation and pen-paper work it is clear that if a and b have different length,a can't be converted into bz.If a is zero string or 	b is zero string, a can't be converted into b.In all other cases conversion in possible.
+	
+	Difficulty - Medium
+       	Time Complexity-O(n).
+       	Tag-math,implementation.      
+
+PROBLEM F:-
+       Statement:-We have a strictly increasing array of n integers.We have to find length of longest sequence which satisfies following conditions:-
+                  1. The sequence is strictly increasing.
+                  2.No adjacent elements are coprime(gcd(x,y)>1).
+                  3.All elements belongs to the array.
+      Solution:-The main idea behind the solution is dynamic progamming(dp).If we denote dp[x] as length of the sequence which  ends with x then for all factors of x         dp[x]=max(dp[x], dp[f[x]]+1),where f[i] is factor of x. All factors of a number can be calculated in O(sqrt(n)).Which works in our constraints.
+     
+     Difficulty - Hard
+     Time Complexity-O(n*sqrt(n)).
+     Tag-dp.   
